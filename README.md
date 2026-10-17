@@ -1,10 +1,10 @@
 # Sitio web de Total System
 
-Sitio estático (HTML + CSS + un poco de JS, sin build ni dependencias) de **Total System**: servicios de software (chatbot de WhatsApp, facturación electrónica, sistemas por industria, software a medida) y las dos apps Android, ChattFlow y Jarvis Planeador.
+Sitio estático (HTML + CSS + un poco de JS, sin build ni dependencias) de **Total System**: servicios de software (facturación electrónica, sistemas por industria, software a medida) y las dos apps Android, ChattFlow y Jarvis Planeador.
 
 ```
 website/
-  index.html                 — home: hero, los 9 servicios de los flyers, bloque que lleva al catálogo, apps, proceso, FAQ y contacto
+  index.html                 — home: hero, los 8 servicios de los flyers, bloque que lleva al catálogo, apps, proceso, FAQ y contacto
   sistemas.html              — catálogo: más de 30 sistemas en 9 categorías; cada uno abre un correo prellenado
   chattflow.html             — página propia de ChattFlow (APK, planes, cómo funciona)
   jarvis-planeador.html      — página propia de Jarvis Planeador (APK, capturas, cómo funciona)

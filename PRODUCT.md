@@ -16,7 +16,7 @@ Owners and managers of small and medium businesses (inferred from the flyers: +5
 
 ## Product Purpose
 
-Total System sells software and automation to businesses: a WhatsApp chatbot, electronic invoicing, ready-made management systems per industry, and custom software. The site must make each offer findable by industry and turn the visit into an email asking for a demo. Success is a demo-request email, and organic search visibility for each service.
+Total System sells software and automation to businesses: electronic invoicing, ready-made management systems per industry, and custom software. The site must make each offer findable by industry and turn the visit into an email asking for a demo. Success is a demo-request email, and organic search visibility for each service.
 
 ## Positioning
 
@@ -28,8 +28,7 @@ For now ALL contact goes to the email jorgecastilloowner@jotaelebundle.com (user
 
 ## Capabilities and Constraints
 
-Services taken only from the ten flyers:
-- Chatbot for WhatsApp customer service: instant automatic replies, FAQ and catalog handling.
+Services taken only from the flyers (the WhatsApp chatbot service was discontinued and removed on 2026-10-17; do not list it again):
 - Electronic invoicing "conforme a la normativa del SENIAT": mobile app, send to customer, PDF download, history and reports, sales control.
 - MedicPro (health): clinical histories, appointments, prescriptions and billing.
 - AcademiaPro (education): enrollment, attendance and grades, one or several campuses, classes and courses, payments.
@@ -51,7 +50,7 @@ Name "Total System", logo is a magenta circle with "ts" plus the wordmark "total
 
 ## Evidence on Hand
 
-Ten flyers (see `assets/servicios/`) with real product mockups, the Jarvis screenshots in `assets/screenshots/`. No testimonials, client logos, case studies, metrics or prices exist; none may be fabricated. UI values inside the flyers (e.g. "$420", "1.240 alumnos") are illustrative mockup data.
+The flyers (see `assets/servicios/`) with real product mockups, the Jarvis screenshots in `assets/screenshots/`. No testimonials, client logos, case studies, metrics or prices exist; none may be fabricated. UI values inside the flyers (e.g. "$420", "1.240 alumnos") are illustrative mockup data.
 
 ## Product Principles
 
