@@ -23,11 +23,11 @@ website/
 
 Tomado de los flyers de Total System: fondo negro-ciruela (`--ink`), magenta (`--pink`), coral (`--coral`) y una variante crema (`--cream`), con la barra magenta de cierre. Los tokens están al inicio de `css/total.css`. Tipografías: Outfit (títulos) y Manrope (texto), servidas desde `fonts/`. Las secciones alternan oscuro y crema.
 
-## Contacto (por ahora, solo correo)
+## Contacto (correo y WhatsApp)
 
-Todos los botones de contacto son enlaces `mailto:` a **jorgecastilloowner@jotaelebundle.com**, con asunto y mensaje prellenados según el servicio. Es una decisión temporal: los flyers traen impreso el WhatsApp +58 422 330 0722 y el sitio www.totalsystem.com en su barra inferior, así que **las imágenes de `assets/servicios/` están recortadas justo encima de esa barra** para no mostrar un contacto que hoy no es el oficial. Los originales completos no están en el repo; para volver a WhatsApp hay que usar los flyers originales y cambiar los `mailto:` por `https://wa.me/584223300722`.
+Los botones de cada servicio y los de «Pedir demo» son enlaces `mailto:` a **georjucho@gmail.com**, con asunto y mensaje prellenados según el servicio. Desde el 2026-11-11 hay además WhatsApp **+55 92 98432-1636** (`https://wa.me/5592984321636`): botón flotante verde en todas las páginas, una segunda píldora en la barra rosa de contacto y un enlace en el pie. Los flyers traen impreso el WhatsApp +58 422 330 0722 y el sitio www.totalsystem.com en su barra inferior, así que **las imágenes de `assets/servicios/` están recortadas justo encima de esa barra** para no mostrar un contacto que no es el oficial (el WhatsApp impreso en ellos es otro número). Los originales completos no están en el repo.
 
-Para cambiar el correo: buscar y reemplazar `jorgecastilloowner@jotaelebundle.com` en todos los `.html` (también aparece en el JSON-LD de `index.html`).
+Para cambiar el correo: buscar y reemplazar `georjucho@gmail.com` en todos los `.html` (también aparece en el JSON-LD de `index.html`). Para cambiar el WhatsApp: buscar y reemplazar `5592984321636` (enlaces `wa.me`), `+55 92 98432-1636` (texto visible) y `+55-92-98432-1636` (JSON-LD) en `index.html`, `sistemas.html` y `404.html`.
 
 ## Flyers de los sistemas nuevos
 

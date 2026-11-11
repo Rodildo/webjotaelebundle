@@ -24,7 +24,7 @@ Sector-specific systems (one named system per industry, multi-branch, real time,
 
 ## Operating Context
 
-For now ALL contact goes to the email jorgecastilloowner@jotaelebundle.com (user decision, 2026-10-09): every CTA is a prefilled mailto link. The flyers print WhatsApp +58 422 330 0722 and www.totalsystem.com on their bottom bar, so the site copies of the flyers are cropped above that bar. The Instagram handle seen in the flyers (totalsystemve) is not linked. Flyers print www.totalsystem.com, but the site is currently served from www.jotaelebundle.com (CNAME). ChattFlow and Jarvis Planeador (two Android apps) were removed from the site on 2026-11-11 by user decision: no app pages, APK links, screenshots or their privacy texts remain; do not list them again.
+Contact goes to the email georjucho@gmail.com (user decision, 2026-10-09; the address was changed on 2026-11-11): every service CTA is a prefilled mailto link. On 2026-11-11 the user also asked for a WhatsApp button with +55 92 98432-1636 (wa.me link): floating green button on every page, a second pill in the magenta contact bar and a footer link. The flyer images still print a different WhatsApp (+58) and stay cropped. The flyers print WhatsApp +58 422 330 0722 and www.totalsystem.com on their bottom bar, so the site copies of the flyers are cropped above that bar. The Instagram handle seen in the flyers (totalsystemve) is not linked. Flyers print www.totalsystem.com, but the site is currently served from www.jotaelebundle.com (CNAME). ChattFlow and Jarvis Planeador (two Android apps) were removed from the site on 2026-11-11 by user decision: no app pages, APK links, screenshots or their privacy texts remain; do not list them again.
 
 ## Capabilities and Constraints
 
@@ -51,7 +51,7 @@ Catalog of ready-made systems, given by the user in a list on 2026-10-09 (30 ite
 
 Prices for the Total System services are NOT defined and must not be invented.
 
-Open decisions: final domain (totalsystem.com vs jotaelebundle.com), when to switch contact back to WhatsApp, whether to add one URL per service later, whether the new systems should get product names (like MedicPro) instead of descriptive ones.
+Open decisions: final domain (totalsystem.com vs jotaelebundle.com), whether WhatsApp should become the main CTA instead of email, whether to add one URL per service later, whether the new systems should get product names (like MedicPro) instead of descriptive ones.
 
 ## Brand Commitments
 

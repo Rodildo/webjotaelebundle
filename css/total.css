@@ -683,6 +683,8 @@ p { text-wrap: pretty; }
 }
 .cta-pill:hover { transform: translateY(-3px); }
 .cta-pill .mail-icon { width: 44px; height: 44px; color: var(--pink); }
+.cta-pill.wa .mail-icon { color: #1ebe5d; }
+.cta-actions { display: grid; gap: 14px; }
 .cta-pill small { display: block; font-size: 0.9rem; font-weight: 600; color: #6a5876; line-height: 1.2; }
 .cta-pill strong { display: block; font-family: var(--font-display); font-weight: 800; font-size: clamp(1.05rem, 2.2vw, 1.4rem); line-height: 1.15; overflow-wrap: anywhere; }
 
@@ -694,13 +696,34 @@ p { text-wrap: pretty; }
 .footer-grid a { text-decoration: none; transition: color 0.2s; }
 .footer-grid a:hover { color: var(--coral); }
 .footer-about p { margin-top: 18px; max-width: 34ch; }
-.footer-bottom { margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--line); font-size: 0.875rem; color: var(--text-faint); display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; }
+.footer-bottom { margin-top: 56px; padding-top: 24px; padding-right: 200px; border-top: 1px solid var(--line); font-size: 0.875rem; color: var(--text-faint); display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; }
 
-/* ---------- Botón flotante de WhatsApp ---------- */
-.mail-fab {
+/* ---------- Botones flotantes: WhatsApp (abajo) y correo (encima) ---------- */
+.wa-fab {
   position: fixed;
   right: 18px;
   bottom: 18px;
+  z-index: 41;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 56px;
+  padding: 0 22px 0 14px;
+  border-radius: 999px;
+  background: #25d366;
+  color: var(--ink);
+  font-weight: 800;
+  text-decoration: none;
+  box-shadow: 0 18px 30px -12px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(21, 11, 28, 0.08);
+  transition: transform 0.25s var(--ease), background-color 0.2s;
+}
+.wa-fab:hover { transform: translateY(-3px); background: #3ee07d; }
+.wa-fab .wa-icon { width: 32px; height: 32px; }
+
+.mail-fab {
+  position: fixed;
+  right: 18px;
+  bottom: 86px;
   z-index: 40;
   display: inline-flex;
   align-items: center;
@@ -774,8 +797,11 @@ p { text-wrap: pretty; }
   .chip.two { right: -1%; bottom: 2%; }
   .steps { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
-  .mail-fab { padding: 0; width: 56px; justify-content: center; right: 14px; bottom: 14px; }
-  .mail-fab span { display: none; }
+  .mail-fab, .wa-fab { padding: 0; width: 56px; justify-content: center; right: 14px; }
+  .wa-fab { bottom: 14px; }
+  .mail-fab { bottom: 82px; }
+  .mail-fab span, .wa-fab span { display: none; }
+  .footer-bottom { padding-right: 80px; }
   .brand { font-size: 1.15rem; }
   .cta-pill { flex-direction: column; align-items: flex-start; gap: 10px; border-radius: 28px; padding: 20px 22px; width: 100%; }
   .cta-pill .mail-icon { width: 36px; height: 36px; }
