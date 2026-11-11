@@ -12,7 +12,7 @@ Static HTML/CSS with a little vanilla JS, no build step. Published as a static s
 
 ## Users
 
-Owners and managers of small and medium businesses (inferred from the flyers: +58 phone, SENIAT, so most likely Venezuela). They sit in gyms, clinics, academies, restaurants, lending businesses or shops, and they arrive mostly from Instagram or WhatsApp on a phone. Their job: find out whether Total System has a system for their kind of business and contact the team by email for a demo.
+Owners and managers of small and medium businesses (inferred from the flyers: +58 phone, SENIAT, so most likely Venezuela). They sit in gyms, clinics, academies, beauty academies, barbershops, car washes, photo studios, restaurants, lending businesses or shops, and personal trainers run their own business from a phone, and they arrive mostly from Instagram or WhatsApp on a phone. Their job: find out whether Total System has a system for their kind of business and contact the team by email for a demo.
 
 ## Product Purpose
 
@@ -24,11 +24,11 @@ Sector-specific systems (one named system per industry, multi-branch, real time,
 
 ## Operating Context
 
-For now ALL contact goes to the email jorgecastilloowner@jotaelebundle.com (user decision, 2026-10-09): every CTA is a prefilled mailto link. The flyers print WhatsApp +58 422 330 0722 and www.totalsystem.com on their bottom bar, so the site copies of the flyers are cropped above that bar. The Instagram handle seen in the flyers (totalsystemve) is not linked. Flyers print www.totalsystem.com, but the site is currently served from www.jotaelebundle.com (CNAME). Two self-serve Android apps are also published as APKs on GitHub Releases: ChattFlow and Jarvis Planeador.
+For now ALL contact goes to the email jorgecastilloowner@jotaelebundle.com (user decision, 2026-10-09): every CTA is a prefilled mailto link. The flyers print WhatsApp +58 422 330 0722 and www.totalsystem.com on their bottom bar, so the site copies of the flyers are cropped above that bar. The Instagram handle seen in the flyers (totalsystemve) is not linked. Flyers print www.totalsystem.com, but the site is currently served from www.jotaelebundle.com (CNAME). ChattFlow and Jarvis Planeador (two Android apps) were removed from the site on 2026-11-11 by user decision: no app pages, APK links, screenshots or their privacy texts remain; do not list them again.
 
 ## Capabilities and Constraints
 
-Services taken only from the flyers (the WhatsApp chatbot service was discontinued and removed on 2026-10-17; do not list it again):
+Services taken from the flyers (the WhatsApp chatbot service was discontinued and removed on 2026-10-17; do not list it again):
 - Electronic invoicing "conforme a la normativa del SENIAT": mobile app, send to customer, PDF download, history and reports, sales control.
 - MedicPro (health): clinical histories, appointments, prescriptions and billing.
 - AcademiaPro (education): enrollment, attendance and grades, one or several campuses, classes and courses, payments.
@@ -38,11 +38,20 @@ Services taken only from the flyers (the WhatsApp chatbot service was discontinu
 - Custom software ("Tú pones las reglas y nosotros ponemos el código").
 - Attendance control and clock-in system (flyer added 2026-10-09), for companies and SMEs: automates working-hours registration, shift control and hours calculation, adapted to the client's needs; multi-device clock-in, automatic calculations, PDF and Excel reports. The flyer carries no contact data.
 
-Catalog of ready-made systems, given by the user in a list on 2026-10-09 (30 items, grouped by the user's own 9 categories: Retail, Deportes-Fitness, Salud-Bienestar, Modas y diseño, Turismo-Hospitalidad, Educación-Formación, Servicios-Profesionales, Tecnología-Desarrollo, Manufactura-Producción): tienda POS, tienda de ropas POS, repostería POS, gimnasio, gestión TI, préstamos y cobranza, botica, clínica, hospedaje, colegio, AcademiaPro, avícolas, escuelas deportivas, lavandería de ropas, hostales, mueblería, alquiler de vehículos, mudanzas, catering, óptica, pizzería, tienda de regalos, inmobiliaria, SSOMA, TPV de peluquerías y barberías, alquiler de departamentos, cochera, transporte, TPV de centro de estética y salones de belleza, facturación electrónica. The assignment of each system to a category is ours (the user only gave the flat list and the category names), so it can be changed. The user also states that the company builds "cualquier sistema o app" on demand. No feature lists exist for these systems beyond their names: do not invent any.
+Six systems already built and running, added to the home page and the catalog on 2026-11-11 (their copy comes from each project's own README/PRODUCT docs on the user's machine; no client names are shown on the site, only the type of business):
+- Beauty academies and courses (from the eyebrow-and-lashes studio's app): courses with seats, students with progress, payments in USD and bolívares, agenda, inventory, verifiable certificates.
+- Barbershops, control system: team check-in/out/lunch with a single-use QR that changes by itself, punctuality score, cuts approved by the cashier, barber of the month.
+- Car washes: services per car assigned to each worker, cashier approves and charges, commission per worker, weekly payout, advances, sales and worker screens.
+- Personal trainers (gym and sports): routines per client, payments in USD and bolívares, class calendar, nudge when a client goes 7+ days without training, client app with progress and nutrition.
+- CRM and ERP for photo studios (from the photo-and-content studio's system): clients and pipeline, sessions and deliveries with client approval, POS, inventory, monthly charges, roles per person. The user calls it "estudio fotográfico"; the source system is a photo, video and content agency plus a print workshop.
+- Digital menu for restaurants: QR menu per table with prices in USD and Bs, waiter takes orders (also offline), cashier approves and charges (mixed payment, change), kitchen screen with timers. It does NOT issue fiscal invoices.
+Their flyers are not photos: they are cards designed in HTML/CSS (`_flyers/`, see README) in the same style as the originals, with illustrative mockup data. The names of the businesses that run these systems are deliberately NOT published anywhere on the site or in this repo; only the type of business is shown.
 
-Apps: ChattFlow (Pro plan $35/month, Basic price still to be confirmed) and Jarvis Planeador (free, Beta). Prices for the Total System services are NOT defined and must not be invented.
+Catalog of ready-made systems, given by the user in a list on 2026-10-09 (30 items, grouped by the user's own 9 categories: Retail, Deportes-Fitness, Salud-Bienestar, Modas y diseño, Turismo-Hospitalidad, Educación-Formación, Servicios-Profesionales, Tecnología-Desarrollo, Manufactura-Producción): tienda POS, tienda de ropas POS, repostería POS, gimnasio, gestión TI, préstamos y cobranza, botica, clínica, hospedaje, colegio, AcademiaPro, avícolas, escuelas deportivas, lavandería de ropas, hostales, mueblería, alquiler de vehículos, mudanzas, catering, óptica, pizzería, tienda de regalos, inmobiliaria, SSOMA, TPV de peluquerías y barberías, alquiler de departamentos, cochera, transporte, TPV de centro de estética y salones de belleza, facturación electrónica. The six systems above were added to the catalog on 2026-11-11 (41 entries in total). The assignment of each system to a category is ours (the user only gave the flat list and the category names), so it can be changed. The user also states that the company builds "cualquier sistema o app" on demand. No feature lists exist for these systems beyond their names: do not invent any.
 
-Open decisions: final domain (totalsystem.com vs jotaelebundle.com), when to switch contact back to WhatsApp, whether to add one URL per service later. The legal text of the two apps still names Kinetiqsystem as developer.
+Prices for the Total System services are NOT defined and must not be invented.
+
+Open decisions: final domain (totalsystem.com vs jotaelebundle.com), when to switch contact back to WhatsApp, whether to add one URL per service later, whether the new systems should get product names (like MedicPro) instead of descriptive ones.
 
 ## Brand Commitments
 
@@ -50,7 +59,7 @@ Name "Total System", logo is a magenta circle with "ts" plus the wordmark "total
 
 ## Evidence on Hand
 
-The flyers (see `assets/servicios/`) with real product mockups, the Jarvis screenshots in `assets/screenshots/`. No testimonials, client logos, case studies, metrics or prices exist; none may be fabricated. UI values inside the flyers (e.g. "$420", "1.240 alumnos") are illustrative mockup data.
+The flyers (see `assets/servicios/`) with real product mockups. No testimonials, client logos, case studies, metrics or prices exist; none may be fabricated. UI values inside the flyers (e.g. "$420", "1.240 alumnos") are illustrative mockup data.
 
 ## Product Principles
 

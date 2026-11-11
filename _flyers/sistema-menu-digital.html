@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<title>Flyer: menú digital</title>
+<link rel="stylesheet" href="flyer.css" />
+<style>
+  .tabs { display: flex; gap: 6px; margin-top: 12px; }
+  .tabs span { padding: 7px 12px; border-radius: 99px; font: 800 12.5px/1 Manrope; background: rgba(30,15,38,.07); color: var(--on-dim); }
+  .tabs span.on { background: var(--pink); color: #fff; }
+  .mi { display: grid; grid-template-columns: 56px 1fr; gap: 11px; align-items: center; padding: 9px; border-radius: 17px; background: #fff; box-shadow: 0 8px 14px -12px rgba(30,15,38,.45); }
+  .mi + .mi { margin-top: 8px; }
+  .mi .th { display: grid; place-items: center; width: 56px; height: 56px; border-radius: 14px; }
+  .mi .th svg { width: 40px; height: 40px; }
+  .mi .nm { font: 800 15px/1.1 Outfit; }
+  .mi .ds { margin-top: 3px; font: 600 11px/1.2 Manrope; color: var(--mute); }
+  .mi .pr { margin-top: 5px; display: flex; align-items: baseline; gap: 7px; }
+  .mi .pr b { font: 800 16px/1 Outfit; color: var(--pink-deep); }
+  .mi .pr span { font: 700 11px/1 Manrope; color: var(--mute); }
+  .tl { display: grid; grid-template-columns: 44px 1fr; gap: 10px; align-items: baseline; padding: 9px 0; font: 700 16px/1.2 Outfit; }
+  .tl + .tl { border-top: 1.5px solid rgba(255,255,255,.1); }
+  .tl .q { font: 800 20px/1 Outfit; color: var(--coral); }
+  .tl small { display: block; margin-top: 4px; font: 700 12px/1 Manrope; color: var(--coral-soft); }
+  .seg { display: flex; gap: 5px; margin-top: 12px; }
+  .seg i { flex: 1; height: 8px; border-radius: 99px; background: rgba(255,255,255,.14); }
+  .seg i.g { background: #4fdc90; } .seg i.y { background: #ffc94d; opacity: .35; } .seg i.r { background: #ff5a6a; opacity: .35; }
+  .btnui.ok { background: linear-gradient(95deg, #2fbf71, #4fdc90); color: #06301a; box-shadow: 0 10px 18px -10px rgba(47,191,113,.8); }
+</style>
+</head>
+<body>
+<div class="card cream">
+
+  <span class="blob coral" style="width:340px;height:340px;right:-96px;top:-122px"></span>
+  <span class="dots" style="right:36px;top:226px;width:130px;height:130px"></span>
+  <span class="blob magenta" style="width:34px;height:34px;right:54px;top:170px"></span>
+
+  <div class="head">
+    <div class="logo" data-logo></div>
+    <p class="eyebrow">Restaurantes · Cafeterías · Menú QR</p>
+    <h1>Tu menú digital,<br /><em>tu caja en orden.</em></h1>
+    <p class="sub">Menú con QR para cada mesa, pedidos del mesonero que llegan a caja y cocina, y precios en $ y Bs.</p>
+  </div>
+
+  <div class="stage">
+    <span class="blob coral" style="left:-60px;top:100px;width:330px;height:330px"></span>
+    <span class="ring" style="left:-80px;top:-6px;width:520px;height:520px"></span>
+    <span class="blob magenta" style="left:408px;top:330px;width:20px;height:20px"></span>
+
+    <!-- Teléfono: menú del cliente -->
+    <div class="phone" style="left:34px;top:8px;transform:rotate(-3deg)">
+      <div class="scr">
+        <div style="display:flex;align-items:center;justify-content:space-between">
+          <div style="display:flex;align-items:center;gap:10px"><span class="avatar ink">M</span><div><div class="kick" style="font-size:11px">Mesa 4</div><div class="ttl" style="margin-top:5px;font-size:20px">Mi restaurante</div></div></div>
+        </div>
+        <div class="tabs"><span class="on">Comidas</span><span>Bebidas</span><span>Otros</span></div>
+
+        <div style="margin-top:12px">
+          <div class="mi">
+            <span class="th" style="background:linear-gradient(150deg,#ffe3c2,#ffc58a)">
+              <svg viewBox="0 0 48 48"><path d="M7 23C7 9 17 6 24 6s17 3 17 17Z" fill="#f4a54a"/><g fill="#fff3d6"><ellipse cx="17" cy="14" rx="2" ry="1.2"/><ellipse cx="25" cy="11" rx="2" ry="1.2"/><ellipse cx="32" cy="16" rx="2" ry="1.2"/><ellipse cx="22" cy="18" rx="2" ry="1.2"/></g><path d="M6 26q4 4.5 8 0t8 0 8 0 8 0 4 0" fill="none" stroke="#4fc77f" stroke-width="4" stroke-linecap="round"/><rect x="6" y="29" width="36" height="7" rx="3.5" fill="#7a3b2e"/><path d="M6 39h36v1.5q0 5-6 5H12q-6 0-6-5Z" fill="#f4a54a"/></svg>
+            </span>
+            <div><div class="nm">Hamburguesa</div><div class="ds">Carne, queso y tomate</div><div class="pr"><b>$6.00</b><span>Bs 2.460</span></div></div>
+          </div>
+          <div class="mi">
+            <span class="th" style="background:linear-gradient(150deg,#ffe0e6,#ffb3c4)">
+              <svg viewBox="0 0 48 48"><path d="M24 44 5 11Q24 0 43 11Z" fill="#ffd36b"/><path d="M5 11Q24 0 43 11" fill="none" stroke="#e8923a" stroke-width="6" stroke-linecap="round"/><circle cx="18" cy="17" r="3.6" fill="#e8394d"/><circle cx="28" cy="20" r="3.6" fill="#e8394d"/><circle cx="23" cy="29" r="3.4" fill="#e8394d"/></svg>
+            </span>
+            <div><div class="nm">Pizza personal</div><div class="ds">Jamón y queso</div><div class="pr"><b>$5.00</b><span>Bs 2.050</span></div></div>
+          </div>
+          <div class="mi">
+            <span class="th" style="background:linear-gradient(150deg,#fff0d2,#ffd9a0)">
+              <svg viewBox="0 0 48 48"><path d="M6 25a18 18 0 0 1 36 0Z" fill="#f2c27b"/><path d="M6 29h36a18 18 0 0 1-36 0Z" fill="#e9b062"/><rect x="9" y="25" width="30" height="4" rx="2" fill="#ffd85c"/><path d="M14 26.4h6M26 26.4h8" stroke="#8a3d2a" stroke-width="2.4" stroke-linecap="round"/></svg>
+            </span>
+            <div><div class="nm">Arepa mixta</div><div class="ds">Carne mechada y queso</div><div class="pr"><b>$3.50</b><span>Bs 1.435</span></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Comanda de cocina -->
+    <div class="ui dk" style="left:430px;top:2px;width:318px;padding:16px 20px 18px;transform:rotate(3deg)">
+      <div style="display:flex;align-items:center;justify-content:space-between">
+        <div><div class="kick" style="color:#cdbfd4">Comanda · Cocina</div><div class="ttl" style="margin-top:6px;font-size:26px">Mesa 4</div></div>
+        <span class="tagp ok" style="font-size:15px;padding:8px 14px"><i class="ic" data-i="clock" style="font-size:17px"></i>02:14</span>
+      </div>
+      <div class="seg"><i class="g"></i><i class="y"></i><i class="r"></i></div>
+      <div style="margin-top:8px">
+        <div class="tl"><span class="q">2×</span><span>Hamburguesa</span></div>
+        <div class="tl"><span class="q">1×</span><span>Pizza personal<small>Sin cebolla</small></span></div>
+        <div class="tl"><span class="q">2×</span><span>Jugo natural</span></div>
+      </div>
+      <div class="btnui ok" style="margin-top:12px;height:48px;font-size:17px"><i class="ic" data-i="tick" style="font-size:22px"></i>Listo</div>
+    </div>
+
+    <!-- Cartelito QR de la mesa -->
+    <div class="ui white" style="left:280px;top:292px;width:214px;padding:14px 16px 16px;transform:rotate(-5deg);border-radius:22px">
+      <div style="display:flex;align-items:baseline;justify-content:space-between"><span class="ttl" style="font-size:30px">Mesa 4</span><i class="ic" data-i="qr" style="font-size:22px;color:var(--pink)"></i></div>
+      <div style="margin-top:9px;padding:10px;border-radius:16px;background:#fff6f3;border:1.5px solid rgba(30,15,38,.08)"><svg id="qr" viewBox="0 0 25 25" width="164" height="164" shape-rendering="crispEdges" style="display:block;margin:0 auto"></svg></div>
+      <div class="b" style="margin-top:10px;text-align:center;font:800 15px/1.1 Outfit;color:var(--pink-deep)">Escanea y mira el menú</div>
+    </div>
+
+    <div class="chip" style="left:514px;top:372px"><span class="bd co"><i class="ic" data-i="coin"></i></span><div><small>Cobro mixto</small><b>$ y Bs con vuelto</b></div></div>
+    <div class="chip" style="left:514px;top:462px"><span class="bd"><i class="ic" data-i="utensils"></i></span><div><small>Pedido enviado</small><b>A cocina</b></div></div>
+    <i class="ic abs" data-i="sparkle" style="left:396px;top:262px;font-size:28px;color:#fff"></i>
+  </div>
+
+  <div class="pills">
+    <div class="pill"><i class="ic" data-i="qr"></i>Menú<br />con QR</div>
+    <div class="pill"><i class="ic" data-i="receipt"></i>Caja y<br />cocina</div>
+    <div class="pill"><i class="ic" data-i="coin"></i>Precios<br />en $ y Bs</div>
+  </div>
+</div>
+
+<script src="flyer.js"></script>
+<script>
+  // QR decorativo (no codifica nada): tres marcadores de esquina y módulos con semilla fija.
+  (function () {
+    const svg = document.getElementById('qr'), N = 25;
+    let s = 4040404;
+    const rnd = () => ((s = (s * 1664525 + 1013904223) >>> 0) / 4294967296);
+    const inFinder = (x, y) => (x < 8 && y < 8) || (x > N - 9 && y < 8) || (x < 8 && y > N - 9);
+    let out = '';
+    for (let y = 0; y < N; y++) for (let x = 0; x < N; x++) {
+      if (inFinder(x, y)) continue;
+      if (rnd() > 0.52) out += `<rect x="${x}" y="${y}" width="1" height="1"/>`;
+    }
+    const finder = (ox, oy) =>
+      `<rect x="${ox}" y="${oy}" width="7" height="7" fill="#1e0f26"/><rect x="${ox+1}" y="${oy+1}" width="5" height="5" fill="#fff6f3"/><rect x="${ox+2}" y="${oy+2}" width="3" height="3" fill="#dc1672"/>`;
+    svg.innerHTML = `<g fill="#1e0f26">${out}</g>` + finder(0, 0) + finder(N - 7, 0) + finder(0, N - 7);
+  })();
+</script>
+</body>
+</html>

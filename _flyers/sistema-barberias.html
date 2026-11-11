@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<title>Flyer: barberías</title>
+<link rel="stylesheet" href="flyer.css" />
+<style>
+  .pole { position: absolute; left: 24px; top: 40px; width: 58px; height: 468px; border-radius: 30px; overflow: hidden;
+    background: repeating-linear-gradient(-62deg, #fff6f3 0 20px, #dc1672 20px 40px, #fff6f3 40px 60px, #ff8f6b 60px 80px);
+    box-shadow: 0 30px 40px -22px rgba(0,0,0,.7), 0 0 40px rgba(220,22,114,.35); }
+  .pole::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(255,255,255,.38) 0, rgba(255,255,255,0) 34%, rgba(0,0,0,.28) 100%); }
+  .cap { position: absolute; left: 14px; width: 66px; height: 26px; border-radius: 10px; background: linear-gradient(180deg, #5a3a6c, #2a1837); box-shadow: 0 6px 14px -4px rgba(0,0,0,.6); }
+  .rank { display: grid; grid-template-columns: 30px 1fr auto; gap: 11px; align-items: center; padding: 10px 12px; border-radius: 16px; }
+  .rank + .rank { margin-top: 8px; }
+  .rank .n { display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; background: rgba(30,15,38,.08); font: 800 15px/1 Outfit; }
+  .rank .nm { font: 800 16px/1.1 Outfit; }
+  .rank .pt { font: 800 18px/1 Outfit; }
+  .rank.first { background: linear-gradient(120deg, var(--pink), #f0457f); color: #fff; box-shadow: 0 12px 20px -12px rgba(220,22,114,.8); }
+  .rank.first .n { background: rgba(255,255,255,.22); }
+  .rank .bar { margin-top: 7px; height: 7px; }
+  .rank.first .bar { background: rgba(255,255,255,.28); }
+  .rank.first .bar > i { background: #fff; }
+  .live { display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: #4fdc90; box-shadow: 0 0 0 5px rgba(79,220,144,.25); }
+</style>
+</head>
+<body>
+<div class="card dark">
+
+  <span class="blob coral" style="width:340px;height:340px;right:-100px;top:-124px"></span>
+  <span class="dots" style="right:30px;top:232px;width:132px;height:132px"></span>
+  <span class="blob magenta" style="width:34px;height:34px;right:58px;top:176px"></span>
+
+  <div class="head">
+    <div class="logo" data-logo></div>
+    <p class="eyebrow">Barberías · Peluquerías</p>
+    <h1>Cada corte cuenta.<br /><em>Y cada minuto.</em></h1>
+    <p class="sub">Asistencia del equipo con un QR que cambia solo, cortes aprobados en caja y el barbero del mes.</p>
+  </div>
+
+  <div class="stage">
+    <span class="ring" style="left:60px;top:-8px;width:620px;height:620px"></span>
+    <span class="blob coral" style="left:690px;top:300px;width:22px;height:22px"></span>
+    <span class="blob magenta" style="left:96px;top:540px;width:18px;height:18px"></span>
+
+    <!-- Poste de barbero -->
+    <div class="pole"></div>
+    <div class="cap" style="left:10px;top:28px;width:66px"></div>
+    <div class="cap" style="left:10px;top:494px;width:66px"></div>
+
+    <!-- Teléfono con el QR de la caja -->
+    <div class="phone" style="left:118px;top:4px;transform:rotate(-3deg)">
+      <div class="scr dk" style="padding-top:48px">
+        <div style="display:flex;align-items:center;justify-content:space-between">
+          <span class="kick" style="color:#cdbfd4">QR de la caja</span>
+          <span class="tagp dkk"><span class="live" style="width:8px;height:8px;box-shadow:0 0 0 4px rgba(79,220,144,.25)"></span>En vivo</span>
+        </div>
+        <div class="ttl" style="margin-top:10px;font-size:23px">Marca tu entrada</div>
+
+        <div style="margin:16px auto 0;width:210px;height:210px;padding:14px;border-radius:22px;background:#fff;box-shadow:0 18px 30px -16px rgba(0,0,0,.7)">
+          <svg id="qr" viewBox="0 0 25 25" width="182" height="182" shape-rendering="crispEdges"></svg>
+        </div>
+
+        <div style="margin-top:13px;display:flex;align-items:center;justify-content:space-between;font:700 13px/1 Manrope;color:#cdbfd4">
+          <span>Cambia solo cada 3 min</span><span class="b" style="color:var(--coral)">02:41</span>
+        </div>
+        <div class="bar" style="margin-top:9px"><i style="width:62%"></i></div>
+        <div class="btnui" style="margin-top:15px"><i class="ic" data-i="clock"></i>Marcar entrada</div>
+      </div>
+    </div>
+
+    <!-- Ranking del mes -->
+    <div class="ui" style="left:412px;top:22px;width:332px;padding:17px 16px 16px">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px">
+        <span class="chip" style="position:static;padding:0;box-shadow:none;background:none"><span class="bd co" style="width:42px;height:42px"><i class="ic" data-i="trophy"></i></span></span>
+        <div><div class="kick">Ranking del mes</div><div class="ttl" style="margin-top:5px;font-size:22px">Barbero del mes</div></div>
+      </div>
+      <div class="rank first"><span class="n">1</span><div><div class="nm">Luis</div><div class="bar"><i style="width:96%"></i></div></div><span class="pt">96</span></div>
+      <div class="rank"><span class="n">2</span><div><div class="nm">Pedro</div><div class="bar"><i style="width:91%"></i></div></div><span class="pt">91</span></div>
+      <div class="rank"><span class="n">3</span><div><div class="nm">Jhon</div><div class="bar"><i style="width:88%"></i></div></div><span class="pt">88</span></div>
+    </div>
+
+    <!-- La barbería en vivo -->
+    <div class="ui dk" style="left:412px;top:322px;width:332px;padding:15px 18px">
+      <div style="display:flex;align-items:center;gap:9px"><span class="live"></span><span class="kick" style="color:#cdbfd4">La barbería en vivo</span></div>
+      <div style="display:flex;gap:22px;margin-top:12px">
+        <div><div class="num" style="font-size:34px">5</div><div class="txt" style="margin-top:4px;color:#cdbfd4;font-size:13.5px">barberos activos</div></div>
+        <div style="width:1.5px;background:rgba(255,255,255,.12)"></div>
+        <div><div class="num" style="font-size:34px;color:var(--coral)">1</div><div class="txt" style="margin-top:4px;color:#cdbfd4;font-size:13.5px">en su almuerzo</div></div>
+      </div>
+    </div>
+
+    <div class="chip" style="left:40px;top:470px"><span class="bd ok"><i class="ic" data-i="clock"></i></span><div><small>Entrada registrada</small><b>8:58 · A tiempo +10</b></div></div>
+    <div class="chip" style="left:446px;top:462px"><span class="bd"><i class="ic" data-i="scissors"></i></span><div><small>Corte aprobado</small><b>Corte y barba</b></div></div>
+  </div>
+
+  <div class="pills">
+    <div class="pill"><i class="ic" data-i="qr"></i>Asistencia<br />con QR</div>
+    <div class="pill"><i class="ic" data-i="scissors"></i>Cortes<br />aprobados</div>
+    <div class="pill"><i class="ic" data-i="trophy"></i>Barbero<br />del mes</div>
+  </div>
+</div>
+
+<script src="flyer.js"></script>
+<script>
+  // QR decorativo (no codifica nada): tres marcadores de esquina y módulos con semilla fija.
+  (function () {
+    const svg = document.getElementById('qr'), N = 25;
+    let s = 20261111;
+    const rnd = () => ((s = (s * 1664525 + 1013904223) >>> 0) / 4294967296);
+    const inFinder = (x, y) => (x < 8 && y < 8) || (x > N - 9 && y < 8) || (x < 8 && y > N - 9);
+    let out = '';
+    for (let y = 0; y < N; y++) for (let x = 0; x < N; x++) {
+      if (inFinder(x, y)) continue;
+      if (rnd() > 0.52) out += `<rect x="${x}" y="${y}" width="1" height="1"/>`;
+    }
+    const finder = (ox, oy) =>
+      `<rect x="${ox}" y="${oy}" width="7" height="7" fill="#1e0f26"/><rect x="${ox+1}" y="${oy+1}" width="5" height="5" fill="#fff"/><rect x="${ox+2}" y="${oy+2}" width="3" height="3" fill="#dc1672"/>`;
+    svg.innerHTML = `<g fill="#1e0f26">${out}</g>` + finder(0, 0) + finder(N - 7, 0) + finder(0, N - 7);
+  })();
+</script>
+</body>
+</html>

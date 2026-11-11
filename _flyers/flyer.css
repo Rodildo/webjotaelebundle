@@ -1,0 +1,119 @@
+/* Flyers de Total System — estilo común de las tarjetas (768 x 1222).
+   Mismo lenguaje que los flyers de la marca: fondo ciruela o crema, logo "ts",
+   titular con acento magenta, maqueta de UI, chips blancos y tres píldoras abajo.
+   Las tipografías son las del sitio (../fonts). Se renderizan con render.py. */
+
+@font-face { font-family: "Outfit"; src: url("../fonts/outfit-latin.woff2") format("woff2"); font-weight: 400 800; }
+@font-face { font-family: "Manrope"; src: url("../fonts/manrope-latin.woff2") format("woff2"); font-weight: 400 800; }
+
+:root {
+  --ink: #150b1c; --ink-2: #1d1027; --ink-3: #2a1837;
+  --pink: #dc1672; --pink-hi: #ff4d94; --pink-deep: #b8115f;
+  --coral: #ff8f6b; --coral-soft: #ffb59c;
+  --cream: #fff1eb; --cream-2: #fbe3d8;
+  --on: #1e0f26; --on-dim: #5b4666; --mute: #8d7a99;
+  --ok: #2fbf71;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 768px; height: 1222px; background: #150b1c; overflow: hidden; }
+body { font-family: "Manrope", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+
+.card { position: relative; width: 768px; height: 1222px; overflow: hidden; color: #fff6f3; }
+.card.dark {
+  background:
+    radial-gradient(760px 560px at 20% 78%, rgba(220, 22, 114, .36), transparent 62%),
+    radial-gradient(620px 460px at 98% 36%, rgba(255, 143, 107, .20), transparent 62%),
+    linear-gradient(180deg, #1a0e23 0%, #130819 100%);
+}
+.card.cream {
+  color: var(--on);
+  background:
+    radial-gradient(720px 520px at 88% 72%, rgba(255, 143, 107, .30), transparent 64%),
+    linear-gradient(180deg, #fff4ef 0%, #ffe3d6 100%);
+}
+
+/* ---------- Cabecera ---------- */
+.head { position: absolute; left: 52px; right: 52px; top: 48px; z-index: 5; }
+.logo { display: inline-flex; align-items: center; gap: 14px; font: 600 37px/1 "Outfit"; letter-spacing: -.01em; color: #fff; }
+.logo svg { width: 54px; height: 54px; flex: none; }
+.cream .logo { background: var(--on); padding: 8px 28px 8px 8px; border-radius: 999px; font-size: 33px; }
+.cream .logo svg { width: 46px; height: 46px; }
+
+.eyebrow { margin-top: 44px; font: 800 21px/1.2 "Manrope"; letter-spacing: .13em; text-transform: uppercase; color: var(--coral); }
+.cream .eyebrow { color: var(--pink-deep); }
+h1 { margin-top: 14px; font: 800 70px/1.02 "Outfit"; letter-spacing: -.025em; color: #fff; }
+h1 em { font-style: normal; background: linear-gradient(95deg, var(--pink-hi), var(--coral)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.cream h1 { color: var(--on); }
+.cream h1 em { background: none; color: #c4136a; -webkit-text-fill-color: #c4136a; }
+.sub { margin-top: 20px; max-width: 650px; font: 500 26px/1.38 "Manrope"; color: #cdbfd4; }
+.cream .sub { color: var(--on-dim); }
+
+/* ---------- Escenario (zona de la maqueta) ---------- */
+.stage { position: absolute; left: 0; top: 474px; width: 768px; height: 570px; z-index: 2; }
+.abs { position: absolute; }
+
+/* ---------- Píldoras inferiores ---------- */
+.pills { position: absolute; left: 44px; right: 44px; bottom: 26px; z-index: 6; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.pill { height: 132px; border-radius: 24px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 9px; padding: 0 10px; text-align: center; font: 700 22px/1.14 "Manrope"; }
+.pill .ic { font-size: 42px; }
+.dark .pill { background: linear-gradient(180deg, rgba(255,255,255,.085), rgba(255,255,255,.03)); border: 1.5px solid rgba(255, 226, 240, .14); color: #fff6f3; }
+.dark .pill .ic { color: var(--coral); filter: drop-shadow(0 0 10px rgba(255, 143, 107, .45)); }
+.cream .pill { background: #fff; border: 1.5px solid rgba(30, 15, 38, .07); color: var(--on); box-shadow: 0 16px 28px -18px rgba(90, 30, 60, .45); }
+.cream .pill .ic { color: var(--pink-deep); }
+
+/* ---------- Íconos ---------- */
+.ic { display: inline-block; width: 1em; height: 1em; flex: none; }
+.ic svg { display: block; width: 100%; height: 100%; }
+
+/* ---------- Decoración de marca ---------- */
+.blob { position: absolute; border-radius: 50%; }
+.coral { background: var(--coral); }
+.magenta { background: var(--pink); }
+.dots { position: absolute; color: var(--coral); opacity: .55; background-image: radial-gradient(currentColor 2.3px, transparent 2.5px); background-size: 22px 22px; }
+.cream .dots { color: var(--coral); opacity: .7; }
+.ring { position: absolute; border-radius: 50%; border: 1.5px solid rgba(255, 77, 148, .38); }
+.cream .ring { border-color: rgba(220, 22, 114, .35); }
+
+/* ---------- Maquetas de UI ---------- */
+.ui { position: absolute; background: #fff6f3; color: var(--on); border-radius: 24px; box-shadow: 0 34px 50px -24px rgba(0, 0, 0, .6), 0 10px 20px -10px rgba(0, 0, 0, .28); }
+.cream .ui { box-shadow: 0 30px 44px -24px rgba(110, 30, 70, .5), 0 8px 16px -8px rgba(110, 30, 70, .2); }
+.ui.white { background: #fff; }
+.ui.dk { background: linear-gradient(180deg, #2a1837, #1d1027); color: #fff6f3; box-shadow: 0 34px 50px -24px rgba(0, 0, 0, .7), 0 0 0 1.5px rgba(255, 226, 240, .12) inset; }
+
+.kick { font: 800 12.5px/1 "Manrope"; letter-spacing: .09em; text-transform: uppercase; color: var(--mute); }
+.ttl { font: 800 24px/1.1 "Outfit"; letter-spacing: -.01em; }
+.num { font: 800 38px/1 "Outfit"; letter-spacing: -.02em; }
+.mut { color: var(--mute); }
+.txt { font: 600 15px/1.25 "Manrope"; }
+.b { font-weight: 800; }
+
+.bar { height: 10px; border-radius: 99px; background: rgba(30, 15, 38, .1); overflow: hidden; }
+.bar > i { display: block; height: 100%; border-radius: 99px; background: linear-gradient(90deg, var(--pink), var(--coral)); }
+.dk .bar { background: rgba(255, 255, 255, .12); }
+
+.tagp { display: inline-flex; align-items: center; gap: 6px; padding: 5px 11px; border-radius: 99px; font: 800 12px/1 "Manrope"; background: rgba(220, 22, 114, .12); color: var(--pink-deep); }
+.tagp.co { background: rgba(255, 143, 107, .22); color: #b84a22; }
+.tagp.ok { background: rgba(47, 191, 113, .18); color: #17824a; }
+.tagp.dkk { background: rgba(255, 255, 255, .12); color: #fff6f3; }
+
+.btnui { display: flex; align-items: center; justify-content: center; gap: 8px; height: 44px; border-radius: 99px; font: 800 15px/1 "Manrope"; color: #fff; background: linear-gradient(95deg, var(--pink), #f0457f); box-shadow: 0 10px 18px -10px rgba(220, 22, 114, .8); }
+.btnui.co { background: linear-gradient(95deg, #ff9d78, var(--coral)); color: var(--on); box-shadow: 0 10px 18px -10px rgba(255, 143, 107, .8); }
+.btnui .ic { font-size: 19px; }
+
+/* Teléfono */
+.phone { position: absolute; width: 262px; height: 528px; border-radius: 46px; background: #0e0714; padding: 10px; box-shadow: 0 46px 60px -26px rgba(0, 0, 0, .75), 0 0 0 2px #2d1b3a inset; }
+.scr { position: relative; width: 100%; height: 100%; border-radius: 36px; overflow: hidden; background: #fff6f3; color: var(--on); padding: 46px 16px 14px; }
+.scr::before { content: ""; position: absolute; top: 11px; left: 50%; width: 80px; height: 22px; margin-left: -40px; border-radius: 12px; background: #0e0714; }
+.scr.dk { background: linear-gradient(180deg, #2a1837, #1b0f25); color: #fff6f3; }
+.avatar { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; font: 800 15px/1 "Outfit"; color: #fff; background: linear-gradient(140deg, var(--pink-hi), var(--pink)); flex: none; }
+.avatar.co { background: linear-gradient(140deg, #ffb08a, var(--coral)); color: var(--on); }
+.avatar.ink { background: var(--on); }
+
+/* Chips flotantes */
+.chip { position: absolute; z-index: 8; display: flex; align-items: center; gap: 12px; padding: 11px 22px 11px 11px; background: #fff; color: var(--on); border-radius: 20px; box-shadow: 0 22px 34px -16px rgba(0, 0, 0, .55); white-space: nowrap; }
+.chip .bd { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 13px; color: #fff; font-size: 26px; background: linear-gradient(140deg, var(--pink-hi), var(--pink)); flex: none; }
+.chip .bd.co { background: linear-gradient(140deg, #ffb08a, var(--coral)); }
+.chip .bd.ok { background: linear-gradient(140deg, #4fdc90, var(--ok)); }
+.chip small { display: block; font: 600 14.5px/1.1 "Manrope"; color: #7a6786; }
+.chip b { display: block; margin-top: 3px; font: 800 21px/1.1 "Outfit"; color: var(--on); letter-spacing: -.01em; }

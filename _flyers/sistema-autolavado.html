@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<title>Flyer: autolavados</title>
+<link rel="stylesheet" href="flyer.css" />
+<style>
+  .wrow { display: grid; grid-template-columns: 38px 1fr auto; gap: 12px; align-items: center; padding: 8px 0; }
+  .wrow + .wrow { border-top: 1.5px solid rgba(30,15,38,.08); }
+  .wrow .nm { font: 800 17px/1.1 Outfit; }
+  .wrow .sv { margin-top: 3px; font: 600 13px/1 Manrope; color: var(--mute); }
+  .wrow .am { font: 800 21px/1 Outfit; }
+  .wk { display: flex; align-items: flex-end; gap: 7px; height: 56px; }
+  .wk i { flex: 1; border-radius: 6px 6px 3px 3px; background: rgba(255,255,255,.28); }
+  .wk i.on { background: #fff; }
+  .bub { position: absolute; border-radius: 50%; background: radial-gradient(circle at 32% 30%, #fff 0 14%, rgba(255,255,255,.55) 15% 48%, rgba(255,255,255,.18) 49% 100%); box-shadow: inset 0 0 0 2px rgba(255,255,255,.75), 0 6px 14px -6px rgba(180,30,100,.35); }
+</style>
+</head>
+<body>
+<div class="card cream">
+
+  <span class="blob coral" style="width:340px;height:340px;right:-96px;top:-122px"></span>
+  <span class="dots" style="right:36px;top:226px;width:130px;height:130px"></span>
+  <span class="blob magenta" style="width:34px;height:34px;right:54px;top:170px"></span>
+
+  <div class="head">
+    <div class="logo" data-logo></div>
+    <p class="eyebrow">Autolavados · Lavaderos</p>
+    <h1>Cada carro lavado,<br /><em>cada pago claro.</em></h1>
+    <p class="sub">Servicios por carro, caja y comisión de cada trabajador. Cada semana sabes cuánto pagar.</p>
+  </div>
+
+  <div class="stage">
+    <span class="blob coral" style="left:92px;top:-4px;width:312px;height:312px"></span>
+    <span class="ring" style="left:36px;top:-34px;width:424px;height:424px"></span>
+    <span class="blob magenta" style="left:448px;top:262px;width:20px;height:20px"></span>
+
+    <!-- Carro -->
+    <svg class="abs" style="left:8px;top:36px" viewBox="0 0 460 206" width="470" height="210" aria-hidden="true">
+      <defs>
+        <linearGradient id="body" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff4d94"/><stop offset="1" stop-color="#c10f68"/></linearGradient>
+        <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff0f6"/><stop offset="1" stop-color="#ffb9d2"/></linearGradient>
+      </defs>
+      <ellipse cx="232" cy="196" rx="208" ry="9" fill="rgba(110,30,70,.28)"/>
+      <path d="M16 146 L16 122 Q16 106 36 102 L98 94 Q126 50 184 44 L282 44 Q338 48 364 92 L412 102 Q444 108 446 132 L446 146 Q446 162 430 162 L32 162 Q16 162 16 146 Z" fill="url(#body)"/>
+      <path d="M96 96 Q130 56 186 56 L228 56 L228 96 Z" fill="url(#glass)"/>
+      <path d="M242 56 L282 56 Q322 62 346 96 L242 96 Z" fill="url(#glass)"/>
+      <path d="M236 56 L236 156" stroke="rgba(80,0,40,.25)" stroke-width="3"/>
+      <rect x="250" y="108" width="32" height="7" rx="3.5" fill="rgba(255,255,255,.8)"/>
+      <path d="M24 138 L438 138" stroke="rgba(80,0,40,.18)" stroke-width="3"/>
+      <path d="M420 116 Q440 116 443 128 L420 128 Z" fill="#fff3bf"/>
+      <rect x="18" y="116" width="16" height="12" rx="4" fill="#ffb59c"/>
+      <path d="M66 162 A44 44 0 0 1 154 162 Z" fill="#8f0c4f"/>
+      <path d="M306 162 A44 44 0 0 1 394 162 Z" fill="#8f0c4f"/>
+      <g><circle cx="110" cy="162" r="36" fill="#1e0f26"/><circle cx="110" cy="162" r="17" fill="#e4d8ea"/><circle cx="110" cy="162" r="6" fill="#1e0f26"/></g>
+      <g><circle cx="350" cy="162" r="36" fill="#1e0f26"/><circle cx="350" cy="162" r="17" fill="#e4d8ea"/><circle cx="350" cy="162" r="6" fill="#1e0f26"/></g>
+      <!-- espuma sobre el techo -->
+      <g fill="#fff" stroke="#ffd2c0" stroke-width="2">
+        <circle cx="168" cy="42" r="16"/><circle cx="196" cy="34" r="20"/><circle cx="228" cy="32" r="22"/><circle cx="260" cy="36" r="18"/><circle cx="288" cy="44" r="14"/><circle cx="214" cy="48" r="14"/><circle cx="246" cy="50" r="13"/>
+      </g>
+    </svg>
+    <i class="bub" style="left:48px;top:30px;width:34px;height:34px"></i>
+    <i class="bub" style="left:420px;top:58px;width:44px;height:44px"></i>
+    <i class="bub" style="left:392px;top:6px;width:22px;height:22px"></i>
+    <i class="bub" style="left:78px;top:262px;width:20px;height:20px;display:none"></i>
+    <i class="bub" style="left:18px;top:150px;width:22px;height:22px"></i>
+    <i class="ic abs" data-i="sparkle" style="left:458px;top:22px;font-size:30px;color:#fff"></i>
+    <i class="ic abs" data-i="sparkle" style="left:104px;top:36px;font-size:20px;color:#fff;opacity:.9"></i>
+
+    <!-- Teléfono del trabajador -->
+    <div class="phone" style="left:480px;top:20px;transform:rotate(4deg)">
+      <div class="scr">
+        <div style="display:flex;align-items:center;justify-content:space-between">
+          <div><div class="kick">Hola, Trabajador 3</div><div class="ttl" style="margin-top:7px;font-size:25px">Mis ganancias</div></div>
+          <span class="avatar co">3</span>
+        </div>
+        <div style="margin-top:15px;padding:15px 15px 14px;border-radius:20px;background:linear-gradient(135deg,var(--pink),#f0457f 70%,#ff8f6b);color:#fff;box-shadow:0 14px 24px -14px rgba(220,22,114,.8)">
+          <div class="kick" style="color:rgba(255,255,255,.8)">Esta semana</div>
+          <div style="display:flex;align-items:baseline;gap:9px;margin-top:8px"><span class="num" style="font-size:44px">$64.50</span></div>
+          <div class="wk" style="margin-top:12px"><i style="height:34%"></i><i style="height:52%"></i><i style="height:42%"></i><i style="height:70%"></i><i style="height:48%"></i><i class="on" style="height:100%"></i><i style="height:22%;opacity:.55"></i></div>
+        </div>
+        <div style="margin-top:12px;display:flex;align-items:center;justify-content:space-between;padding:12px 13px;border-radius:16px;background:#fff">
+          <div style="display:flex;align-items:center;gap:10px"><i class="ic" data-i="drop" style="font-size:22px;color:var(--pink)"></i><span class="b" style="font:800 15px/1 Outfit">Hoy</span></div><span class="b" style="font:800 17px/1 Outfit;color:var(--pink-deep)">+$12.00</span>
+        </div>
+        <div style="margin-top:8px;display:flex;align-items:center;justify-content:space-between;padding:12px 13px;border-radius:16px;background:#fff">
+          <div style="display:flex;align-items:center;gap:10px"><i class="ic" data-i="calendar" style="font-size:22px;color:var(--pink)"></i><span class="b" style="font:800 15px/1 Outfit">Tu pago</span></div><span class="tagp co">Sábado</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Nómina de la semana -->
+    <div class="ui white" style="left:24px;top:282px;width:436px;padding:15px 20px 14px;border-radius:26px">
+      <div style="display:flex;align-items:center;justify-content:space-between">
+        <div><div class="kick">Nómina</div><div class="ttl" style="margin-top:6px;font-size:23px">Pago de la semana</div></div>
+        <span class="tagp"><i class="ic" data-i="check" style="font-size:15px"></i>Semana cerrada</span>
+      </div>
+      <div style="margin-top:6px">
+        <div class="wrow"><span class="avatar">1</span><div><div class="nm">Trabajador 1</div><div class="sv">14 servicios</div></div><span class="am">$86.00</span></div>
+        <div class="wrow"><span class="avatar co">2</span><div><div class="nm">Trabajador 2</div><div class="sv">11 servicios</div></div><span class="am">$64.50</span></div>
+        <div class="wrow"><span class="avatar ink">3</span><div><div class="nm">Trabajador 3</div><div class="sv">9 servicios</div></div><span class="am">$52.00</span></div>
+      </div>
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-top:3px;padding-top:12px;border-top:2px dashed rgba(30,15,38,.14)">
+        <span class="b" style="font:800 16px/1 Outfit">Total a pagar</span><span class="num" style="font-size:30px;color:var(--pink-deep)">$312.50</span>
+      </div>
+    </div>
+
+    <div class="chip" style="left:236px;top:238px"><span class="bd ok"><i class="ic" data-i="check"></i></span><div><small>Lavado + encerado</small><b>Cobrado en caja · $18</b></div></div>
+  </div>
+
+  <div class="pills">
+    <div class="pill"><i class="ic" data-i="car"></i>Servicios<br />por carro</div>
+    <div class="pill"><i class="ic" data-i="percent"></i>Caja y<br />comisiones</div>
+    <div class="pill"><i class="ic" data-i="calendar"></i>Pago<br />semanal</div>
+  </div>
+</div>
+<script src="flyer.js"></script>
+</body>
+</html>

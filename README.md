@@ -1,24 +1,20 @@
 # Sitio web de Total System
 
-Sitio estático (HTML + CSS + un poco de JS, sin build ni dependencias) de **Total System**: servicios de software (facturación electrónica, sistemas por industria, software a medida) y las dos apps Android, ChattFlow y Jarvis Planeador.
+Sitio estático (HTML + CSS + un poco de JS, sin build ni dependencias) de **Total System**: servicios de software (facturación electrónica, control de asistencia, sistemas por industria, software a medida).
 
 ```
 website/
-  index.html                 — home: hero, los 8 servicios de los flyers, bloque que lleva al catálogo, apps, proceso, FAQ y contacto
-  sistemas.html              — catálogo: más de 30 sistemas en 9 categorías; cada uno abre un correo prellenado
-  chattflow.html             — página propia de ChattFlow (APK, planes, cómo funciona)
-  jarvis-planeador.html      — página propia de Jarvis Planeador (APK, capturas, cómo funciona)
-  privacidad.html            — Privacidad y Términos de Jarvis Planeador
-  chatflow-privacidad.html   — Privacidad y Términos de ChattFlow (borrador, tiene campos [pendiente])
+  index.html                 — home: hero, servicios destacados (asistencia y facturación), 11 sistemas por industria con su flyer, software a medida, proceso, FAQ y contacto
+  sistemas.html              — catálogo: 41 sistemas en 9 categorías; cada uno abre un correo prellenado
   404.html                   — página de error con la marca (GitHub Pages la sirve sola)
   css/total.css              — única hoja de estilos: tokens de marca + todos los componentes
   js/site.js                 — menú móvil (la página funciona completa sin JS)
   fonts/                     — Outfit y Manrope autohospedadas (woff2, subset latin)
   assets/
-    servicios/               — los flyers de la marca, sin la barra de contacto (ver abajo); cada uno en 2 tamaños (-480.jpg y completo)
-    screenshots/             — capturas reales de Jarvis Planeador
+    servicios/               — los flyers de la marca; cada uno en 2 tamaños (-480.jpg y completo). Los de asistencia, facturación, MedicPro, AcademiaPro, restaurantes, gimnasios, préstamos y software a medida son los originales recortados (ver abajo); los 6 sistemas nuevos se generan desde _flyers/
     og-total-system.png      — imagen 1200x630 para compartir el link
-    favicon-48.png, apple-touch-icon.png, logo-total-system-512.png, logo.png (ícono de Jarvis)
+    favicon-48.png, apple-touch-icon.png, logo-total-system-512.png
+  _flyers/                   — fuente de los 6 flyers nuevos (HTML + CSS) y render.py; no se publica (ver «Flyers»)
   CNAME, robots.txt, sitemap.xml, Dockerfile, .dockerignore
   PRODUCT.md                 — contexto de producto para el skill de diseño (no es parte del sitio)
 ```
@@ -33,23 +29,19 @@ Todos los botones de contacto son enlaces `mailto:` a **jorgecastilloowner@jotae
 
 Para cambiar el correo: buscar y reemplazar `jorgecastilloowner@jotaelebundle.com` en todos los `.html` (también aparece en el JSON-LD de `index.html`).
 
-## Activar los botones de descarga
+## Flyers de los sistemas nuevos
 
-Las páginas enlazan a dos APK en GitHub Releases: `chattflow.apk` (repo `Rodildo/whatsapp-manager-bot-apk`) y `jarvis-planeador.apk` (repo `Rodildo/jarvis-planeador`). El botón "Descargar APK" de Jarvis apunta a:
+Los flyers de academias de belleza, barberías, autolavados, entrenadores, estudios fotográficos y menú digital no son fotos: son tarjetas diseñadas en HTML/CSS con las mismas tipografías y colores del sitio, renderizadas a JPG. La fuente está en `_flyers/`: una página `sistema-*.html` por flyer, `flyer.css` con el estilo común y `flyer.js` con los íconos. Los datos que aparecen dentro (nombres, montos, horas, el QR) son ilustrativos.
+
+Para cambiar un texto o un color, edita el HTML y vuelve a generar:
+
 ```
-https://github.com/Rodildo/jarvis-planeador/releases/latest/download/jarvis-planeador.apk
+pip install playwright pillow
+python _flyers/render.py                       # todos
+python _flyers/render.py sistema-barberias     # uno solo
 ```
 
-Esa URL de GitHub **siempre sirve el asset con ese nombre exacto del release más reciente** — no hay que tocar el HTML nunca más una vez configurado. Para activarlo:
-
-1. Compila el APK desde Android Studio (como siempre, nunca en segundo plano — ver `AGENTS.md`).
-2. En GitHub, ve a `Releases` → `Draft a new release`.
-3. Sube el `.apk` compilado y renómbralo (o el asset) exactamente a `jarvis-planeador.apk`.
-4. Publica el release.
-
-Cada vez que saques una versión nueva, solo repite los pasos 1-4 con un release nuevo — el link de la landing no cambia.
-
-**Alternativa** si no quieres usar GitHub Releases: sube el `.apk` a `website/assets/jarvis-planeador.apk` y cambia el `href` de los botones de descarga en `jarvis-planeador.html` e `index.html` a `assets/jarvis-planeador.apk`. Más simple, pero el archivo queda versionado en git (pesa varias decenas de MB) y hay que reemplazarlo a mano en cada release.
+Usa el Google Chrome instalado (no descarga nada) y escribe `assets/servicios/<nombre>.jpg` (768 px) y `<nombre>-480.jpg`. La carpeta empieza con guion bajo: GitHub Pages con Jekyll (el modo actual) no la publica, y `.dockerignore` la deja fuera de la imagen.
 
 ## Publicar el sitio
 
@@ -77,9 +69,9 @@ Hecho en el HTML de cada página:
 - `<title>` (≤ 60 caracteres) y `<meta name="description">` (≤ 160) únicos, con las palabras clave del servicio.
 - `<link rel="canonical">`, `robots` con `max-image-preview:large`, `lang="es"`, `theme-color`.
 - Open Graph y Twitter Card (`summary_large_image`) con `assets/og-total-system.png` (1200x630).
-- Datos estructurados JSON-LD: `Organization` (con `OfferCatalog` de los servicios principales y del catálogo), `WebSite` y `FAQPage` en `index.html`; `MobileApplication` y `BreadcrumbList` en cada página de app; `CollectionPage` + `ItemList` (36 entradas) y `BreadcrumbList` en `sistemas.html`. El texto del FAQ del JSON-LD es idéntico al visible.
+- Datos estructurados JSON-LD: `Organization` (con `OfferCatalog` de los servicios principales y del catálogo), `WebSite` y `FAQPage` en `index.html`; `CollectionPage` + `ItemList` (41 entradas, generada desde el propio HTML del catálogo) y `BreadcrumbList` en `sistemas.html`. El texto del FAQ del JSON-LD es idéntico al visible.
 - Un solo `<h1>` por página, jerarquía h2/h3 correcta, cada servicio es texto indexable (no solo imagen), `alt` descriptivo en cada flyer, `width`/`height` en todas las imágenes (sin saltos de layout), `loading="lazy"` bajo el primer pantallazo, `srcset` con versión de 480 px, precarga de fuentes y de la imagen principal.
-- `sitemap.xml` con las 6 páginas, `robots.txt` apuntando a él, `404.html` con `noindex`.
+- `sitemap.xml` con las 2 páginas, `robots.txt` apuntando a él, `404.html` con `noindex`.
 - Accesibilidad: enlace para saltar al contenido, foco visible, contraste AA, `prefers-reduced-motion`, menú móvil con `aria-expanded`.
 
 **Dominio:** el sitio se sirve desde `www.jotaelebundle.com` (CNAME). Los flyers dicen `www.totalsystem.com`; si se conecta ese dominio hay que cambiarlo en `CNAME`, `robots.txt`, `sitemap.xml`, y en los `canonical`, `og:url`, `og:image` y JSON-LD de los `.html` (buscar y reemplazar `https://www.jotaelebundle.com`).
@@ -87,7 +79,3 @@ Hecho en el HTML de cada página:
 **Pendiente (a petición del usuario, para una sesión futura):** verificar la propiedad del dominio en **Google Search Console** y enviar el `sitemap.xml` ahí para que Google empiece a indexar el sitio. Suele pedir uno de estos dos métodos:
 - Subir un archivo HTML de verificación a la raíz del sitio (a `website/`, y volver a publicar con `git subtree push`), o
 - Agregar un registro TXT en el DNS de `jotaelebundle.com` en IONOS.
-
-## Capturas de pantalla
-
-Las capturas actuales (`assets/screenshots/`) son reales, tomadas del dispositivo del usuario. Si la UI de esas pantallas cambia en el futuro, hay que volver a tomarlas y reemplazar esos dos archivos (mismo nombre, mismas proporciones ~763×1600 funciona bien con el marco de teléfono en CSS).

@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<title>Flyer: estudios fotográficos</title>
+<link rel="stylesheet" href="flyer.css" />
+<style>
+  .lens { position: absolute; left: 14px; top: 42px; width: 366px; height: 366px; border-radius: 50%;
+    background: repeating-conic-gradient(from 0deg, #3a2347 0 2.4deg, #1a0e22 2.4deg 4.8deg);
+    box-shadow: 0 0 0 6px #0e0714, 0 40px 60px -26px rgba(0,0,0,.85), 0 0 90px rgba(220,22,114,.42); }
+  .lens > i { position: absolute; border-radius: 50%; display: block; }
+  .l1 { inset: 32px; background: radial-gradient(circle at 34% 28%, #4f2d62, #150b1c 70%); box-shadow: inset 0 0 0 5px #0e0714, inset 0 8px 16px rgba(255,255,255,.14); }
+  .l2 { inset: 74px; background: radial-gradient(circle at 36% 30%, #86349c 0, #3a1450 38%, #150b1c 76%); box-shadow: inset 0 0 0 6px #2a1837; }
+  .l3 { inset: 108px; background: radial-gradient(circle at 36% 32%, #ffc2a6 0, #ff4d94 20%, #9a1c80 48%, #25102f 82%); box-shadow: inset 0 0 44px rgba(255,77,148,.6); }
+  .l4 { inset: 146px; background: radial-gradient(circle at 40% 36%, #2f1a3c, #060208); }
+  .l5 { left: 100px; top: 70px; width: 122px; height: 46px; background: linear-gradient(180deg, rgba(255,255,255,.75), rgba(255,255,255,0)); transform: rotate(-34deg); filter: blur(.8px); }
+  .l6 { left: 214px; top: 214px; width: 26px; height: 26px; background: radial-gradient(circle, rgba(255,255,255,.9), rgba(255,255,255,0) 70%); }
+  .vf { position: absolute; width: 38px; height: 38px; border: 0 solid rgba(255,246,243,.85); }
+  .vf.a { left: -4px; top: 20px; border-width: 5px 0 0 5px; border-top-left-radius: 10px; }
+  .vf.b { left: 346px; top: 20px; border-width: 5px 5px 0 0; border-top-right-radius: 10px; }
+  .vf.c { left: -4px; top: 432px; border-width: 0 0 5px 5px; border-bottom-left-radius: 10px; }
+  .vf.d { left: 346px; top: 432px; border-width: 0 5px 5px 0; border-bottom-right-radius: 10px; }
+  .hud { position: absolute; font: 800 13px/1 Manrope; letter-spacing: .12em; text-transform: uppercase; color: #cdbfd4; }
+  .pol { position: absolute; width: 124px; padding: 8px 8px 24px; background: #fff; border-radius: 6px; box-shadow: 0 22px 30px -14px rgba(0,0,0,.7); }
+  .pol .im { height: 108px; border-radius: 3px; position: relative; overflow: hidden; }
+  .pol .im::after { content: ""; position: absolute; left: 50%; bottom: -34px; width: 90px; height: 90px; margin-left: -45px; border-radius: 50%; background: rgba(255,255,255,.3); }
+  .pol .im::before { content: ""; position: absolute; right: 16px; top: 14px; width: 24px; height: 24px; border-radius: 50%; background: rgba(255,255,255,.85); }
+  .pl { display: grid; grid-template-columns: 12px 1fr auto; gap: 11px; align-items: center; padding: 9px 0; }
+  .pl .nm { font: 800 16px/1 Outfit; }
+  .pl .ct { font: 800 18px/1 Outfit; }
+  .pl .bar { margin-top: 7px; height: 8px; }
+  .pl .sw { width: 12px; height: 12px; border-radius: 4px; }
+</style>
+</head>
+<body>
+<div class="card dark">
+
+  <span class="blob coral" style="width:340px;height:340px;right:-100px;top:-124px"></span>
+  <span class="dots" style="right:30px;top:232px;width:132px;height:132px"></span>
+  <span class="blob magenta" style="width:34px;height:34px;right:58px;top:176px"></span>
+
+  <div class="head">
+    <div class="logo" data-logo></div>
+    <p class="eyebrow">Estudios fotográficos · CRM y ERP</p>
+    <h1>De la sesión<br /><em>hasta el cobro.</em></h1>
+    <p class="sub">CRM y ERP para estudios fotográficos: clientes, sesiones, entregas con aprobación, caja y cobros.</p>
+  </div>
+
+  <div class="stage">
+    <span class="ring" style="left:-60px;top:-14px;width:520px;height:520px"></span>
+    <span class="blob coral" style="left:396px;top:18px;width:18px;height:18px"></span>
+
+    <!-- Lente -->
+    <div class="lens"><i class="l1"></i><i class="l2"></i><i class="l3"></i><i class="l4"></i><i class="l5"></i><i class="l6"></i></div>
+    <i class="vf a"></i><i class="vf b"></i><i class="vf c"></i><i class="vf d"></i>
+    <span class="hud" style="left:26px;top:2px">ISO 100 · f/1.8</span>
+    <i class="ic abs" data-i="sparkle" style="left:352px;top:14px;font-size:38px;color:#fff"></i>
+    <i class="ic abs" data-i="sparkle" style="left:30px;top:370px;font-size:20px;color:var(--coral)"></i>
+
+    <!-- Embudo de clientes -->
+    <div class="ui" style="left:410px;top:0;width:336px;padding:16px 18px 10px">
+      <div style="display:flex;align-items:center;justify-content:space-between">
+        <div><div class="kick">CRM</div><div class="ttl" style="margin-top:6px;font-size:23px">Clientes y sesiones</div></div>
+        <span class="chip" style="position:static;padding:0;box-shadow:none;background:none"><span class="bd" style="width:40px;height:40px;font-size:23px"><i class="ic" data-i="columns"></i></span></span>
+      </div>
+      <div style="margin-top:6px">
+        <div class="pl"><i class="sw" style="background:#ffb59c"></i><div><div class="nm">Consulta</div><div class="bar"><i style="width:100%"></i></div></div><span class="ct">6</span></div>
+        <div class="pl"><i class="sw" style="background:#ff8f6b"></i><div><div class="nm">Sesión agendada</div><div class="bar"><i style="width:68%"></i></div></div><span class="ct">4</span></div>
+        <div class="pl"><i class="sw" style="background:#f0457f"></i><div><div class="nm">En edición</div><div class="bar"><i style="width:50%"></i></div></div><span class="ct">3</span></div>
+        <div class="pl"><i class="sw" style="background:#dc1672"></i><div><div class="nm">Entrega</div><div class="bar"><i style="width:34%"></i></div></div><span class="ct">2</span></div>
+      </div>
+    </div>
+
+    <!-- Cobros del mes -->
+    <div class="ui dk" style="left:410px;top:300px;width:336px;padding:16px 20px">
+      <div style="display:flex;align-items:center;justify-content:space-between">
+        <span class="kick" style="color:#cdbfd4">Cobros del mes</span><span class="tagp dkk">3 por cobrar</span>
+      </div>
+      <div style="display:flex;align-items:baseline;gap:10px;margin-top:11px"><span class="num" style="font-size:42px">$420</span><span class="b" style="font-size:15px;color:var(--coral)">cobrado</span></div>
+      <div class="bar" style="margin-top:12px"><i style="width:72%"></i></div>
+    </div>
+
+    <!-- Polaroids -->
+    <div class="pol" style="left:26px;top:372px;transform:rotate(-8deg)"><div class="im" style="background:linear-gradient(160deg,#ffb59c,#ff4d94)"></div></div>
+    <div class="pol" style="left:138px;top:402px;transform:rotate(6deg)"><div class="im" style="background:linear-gradient(160deg,#c9a0ff,#dc1672 70%,#ff8f6b)"></div></div>
+
+        <div class="chip" style="left:228px;top:448px"><span class="bd ok"><i class="ic" data-i="check"></i></span><div><small>Cliente aprobó</small><b>La entrega</b></div></div>
+    <div class="chip" style="left:486px;top:488px"><span class="bd co"><i class="ic" data-i="calendar"></i></span><div><small>Sesión mañana</small><b>10:00 · Estudio</b></div></div>
+  </div>
+
+  <div class="pills">
+    <div class="pill"><i class="ic" data-i="users"></i>CRM de<br />clientes</div>
+    <div class="pill"><i class="ic" data-i="camera"></i>Sesiones y<br />entregas</div>
+    <div class="pill"><i class="ic" data-i="wallet"></i>Caja y<br />cobros</div>
+  </div>
+</div>
+<script src="flyer.js"></script>
+</body>
+</html>
